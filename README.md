@@ -57,22 +57,17 @@ and there are only 5 examples as support set for each labels in the test domains
 python data.py
 ```
 
-* Train data: `*.train` files in train domains.
-Dev data: `*.trian` files in test domains as support data and `*.dev` files in test domains as query data.
-Test data: `*.trian` files in test domains as support data and `*.test` files in test domains as query data.
-
+* Data for train, dev and test:
+    - Train data: `*.train` files in train domains.
+    - Dev data: `*.trian` files in test domains as support data and `*.dev` files in test domains as query data.
+    - Test data: `*.trian` files in test domains as support data and `*.test` files in test domains as query data.
 * Pre-process all the texts data.
-
 * Extract vocabulary with train data. Vocabulary has size of 35913, with 0 as `<pad>` and 1 as `<unk>`.
-
 * Index all the texts with the vocabulary.
-
 * Training batch composition: 5 negative support data + 5 positive support data + 27 negative query data + 27 positive query data.
 As this is a 2-way 5-shot problem, the 2-ways means the amount of labels (negative/positive) and the 5-shot means the size of support data with the same label.
-
 * Dev batch composition: 5 negative support data + 5 positive support data + 54 query data. There are 183 batches in total.
 * Test batch composition: 5 negative support data + 5 positive support data + 54 query data. There are 181 batches in total.
-
 * Above all, the batch size is always 64.
 
 ### Word2Vec
@@ -95,8 +90,9 @@ python word2vec.py
 * Encoder Module: bi-direction recurrent neural network with self-attention.
 * Induction Module: dynamic routing induction algorithm.
 * Relation Module: measure the correlation between each pair of query and class and output the relation scores.
+* See the paper in the reference section (at the end) for details.
 
-## Training
+## Train, Dev and Test
 
 ```angularjs
 export CUDA_VISIBLE_DEVICES=1
@@ -117,7 +113,7 @@ tensorboard --logdir=log/
 | ------| ------|
 | ![train_loss](pic/train_loss.png) | ![train_acc](pic/train_acc.png) |
 
-| Dev Accuracy (achieved the highest __0.8410__ on episode 9200)|Test Accuracy (on episode 9200) |
+| Dev Accuracy (achieved the highest 0.8410 on episode 9200)|Test Accuracy (on episode 9200) |
 | ------|------|
 | ![dev_loss](pic/dev_acc.png) |__0.8452__ |
 
