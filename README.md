@@ -37,8 +37,8 @@ on Amazon.
 * For each product domain, there are three
 different binary classification tasks. These buckets then form
 23 x 3 = 69 tasks in total. 
-* 4 x 3 = 12 tasks from 4 domains (Books, DVD, Electronics and Kitchen) are selected as test domains, 
-and there are only 5 examples as support set for each labels in the test domains.
+* 4 x 3 = 12 tasks from 4 test domains (Books, DVD, Electronics and Kitchen) are selected as test set, 
+and there are only 5 examples as support set for each labels in the test set. There other 19 domains are train domains.
  
 | Train Tasks | Dev Tasks|Test Tasks|
 | ------| ------|------|
@@ -65,6 +65,7 @@ python data.py
 * Extract vocabulary with train data. Vocabulary has size of 35913, with 0 as `<pad>` and 1 as `<unk>`.
 * Index all the texts with the vocabulary.
 * Training batch composition: 5 negative support data + 5 positive support data + 27 negative query data + 27 positive query data.
+In each batch, support data and query data are randomly divided.
 As this is a 2-way 5-shot problem, the 2-ways means the amount of labels (negative/positive) and the 5-shot means the size of support data with the same label.
 * Dev batch composition: 5 negative support data + 5 positive support data + 54 query data. There are 183 batches in total.
 * Test batch composition: 5 negative support data + 5 positive support data + 54 query data. There are 181 batches in total.
