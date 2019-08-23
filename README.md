@@ -84,7 +84,7 @@ python word2vec.py
 
 ### Reference
 
-[Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1)
+This dataset comes from the paper [Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1).
 
 ## Model
 
@@ -119,7 +119,8 @@ tensorboard --logdir=log/
 | ![dev_loss](pic/dev_acc.png) |__0.8452__ |
 
 ## Reference
-[Few-Shot Text Classification with Induction Network](https://arxiv.org/abs/1902.10482)
+
+This is an implementation of the paper [Few-Shot Text Classification with Induction Network](https://arxiv.org/abs/1902.10482).
 
 ## Author
 Zhongyu Chen
