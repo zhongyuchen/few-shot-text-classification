@@ -25,7 +25,7 @@ that will help classify the test set more successfully.
 ## Prerequisites
 
 * Install the required packages by:
-```angular2
+```
 pip install -r requirements.txt
 ```
 
@@ -59,7 +59,7 @@ and there are only 5 examples as support set for each labels in the test set. Th
 
 ### Process
 
-```angular2
+```
 python data.py
 ```
 
@@ -79,7 +79,7 @@ As this is a 2-way 5-shot problem, the 2-ways means the amount of labels (negati
 
 ### Word2Vec
 
-```angular2
+```
 python word2vec.py
 ```
 
@@ -97,7 +97,7 @@ python word2vec.py
 
 ## Train, Dev and Test
 
-```angularjs
+```
 export CUDA_VISIBLE_DEVICES=1
 python main.py
 ```
@@ -106,19 +106,23 @@ python main.py
 * Dev while training and record dev accuracy.
 * Pick the checkpoint with the highest dev accuracy as the best model and test on it.
 
-## Result
+## Result on ARSC
 
-```angularjs
+* tensorboard
+
+```
 tensorboard --logdir=log/
 ```
+
+* result
 
 | Train Loss | Train Accuracy |
 | ------| ------|
 | ![train_loss](pic/train_loss.png) | ![train_acc](pic/train_acc.png) |
 
-| Dev Accuracy (achieved the highest 0.8410 on episode 9200)|Test Accuracy (on episode 9200) |
-| ------|------|
-| ![dev_loss](pic/dev_acc.png) |__0.8452__ |
+| Dev Accuracy (achieves the highest 0.8410 at episode 9200)|Test Accuracy (at episode 9200) |Test Accuracy (paper)|
+| ------|------| --- |
+| ![dev_loss](pic/dev_acc.png) |__0.8452__ |__0.8563__ |
 
 ## Author
 Zhongyu Chen
