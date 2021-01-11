@@ -1,6 +1,10 @@
-# few-shot-learning
+# few-shot-text-classification
 
-Few-shot learning on binary text classification with Word2Vec weights initialization
+Few-shot binary text classification with Induction Networks and Word2Vec weights initialization
+
+## Reference
+
+This is an PyTorch implementation of the paper [Induction Networks for Few-Shot Text Classification](https://arxiv.org/abs/1902.10482v2).
 
 ## Few-shot Classification
 
@@ -31,6 +35,8 @@ pip install -r requirements.txt
 * `configparser` is used to parse the parameters.
 
 ## Dataset: Amazon Review Sentiment Classification (ARSC)
+
+This dataset comes from the paper [Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1).
 
 * The dataset comprises English reviews for 23 types of products
 on Amazon. 
@@ -82,10 +88,6 @@ python word2vec.py
 * Get the weights of the Word2Vec model.
 * Load the weights in the encoder module.
 
-### Reference
-
-This dataset comes from the paper [Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1).
-
 ## Model
 
 * Encoder Module: bi-direction recurrent neural network with self-attention.
@@ -117,10 +119,6 @@ tensorboard --logdir=log/
 | Dev Accuracy (achieved the highest 0.8410 on episode 9200)|Test Accuracy (on episode 9200) |
 | ------|------|
 | ![dev_loss](pic/dev_acc.png) |__0.8452__ |
-
-## Reference
-
-This is an implementation of the paper [Few-Shot Text Classification with Induction Network](https://arxiv.org/abs/1902.10482).
 
 ## Author
 Zhongyu Chen
