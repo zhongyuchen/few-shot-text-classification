@@ -4,7 +4,7 @@ Few-shot binary text classification with Induction Networks and Word2Vec weights
 
 ## Reference
 
-This is an PyTorch implementation of the paper [Induction Networks for Few-Shot Text Classification](https://arxiv.org/abs/1902.10482v2).
+This is an PyTorch implementation of IJCNLP 2019 paper [Induction Networks for Few-Shot Text Classification](https://arxiv.org/abs/1902.10482v2).
 
 ## Few-shot Classification
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ## Dataset: Amazon Review Sentiment Classification (ARSC)
 
-This dataset comes from the paper [Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1).
+This dataset comes from NAACL 2018 paper [Diverse Few-Shot Text Classification with Multiple Metrics](https://arxiv.org/abs/1805.07513v1).
 
 * The dataset comprises English reviews for 23 types of products
 on Amazon. 
