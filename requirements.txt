@@ -1,4 +1,4 @@
-numpy==1.16.2
+numpy==1.22.0
 fastNLP==0.4.1
 gensim==3.8.0
 tensorboardX==1.8
